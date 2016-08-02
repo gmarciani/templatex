@@ -1,0 +1,203 @@
+\ProvidesPackage{gmbook}[2016/20/02 1.0.0]
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage[nopar]{lipsum}
+\usepackage[italian]{babel}
+\usepackage{listings}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+\usepackage[some]{background}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\usepackage{url}
+\usepackage{hyperref}
+
+\definecolor{ocre}{RGB}{52,177,201} % Define the orange color used for highlighting throughout the book
+
+\renewcommand{\lstlistingname}{Listing}
+
+\numberwithin{equation}{chapter}
+\numberwithin{figure}{chapter}
+
+\pagestyle{plain}
+
+\newcommand{\placeholder}{
+	\includegraphics[width=0.8\textwidth]{placeholder400x200.eps}
+}
+
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+
+%----------------------------------------------------------------------------------------
+%	GENERAL ATTRIBUTES
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\institution}[1]{
+	\gdef\@institution{#1}	
+}
+
+\newcommand*{\department}[1]{
+	\gdef\@department{#1}
+}
+
+\newcommand*{\project}[1]{
+	\gdef\@project{#1}
+}
+
+\newcommand*{\subject}[1]{
+	\gdef\@subject{#1}
+}
+
+\newcommand*{\keywords}[1]{
+	\gdef\@keywords{#1}
+}
+
+\newcommand*{\lang}[1]{
+	\gdef\@lang{#1}
+}
+
+\newcommand*{\authorWeb}[1]{
+	\gdef\@authorWeb{#1}
+}
+
+\newcommand*{\wallpaper}[4]{
+	\backgroundsetup{
+		angle=0,  
+		scale=1, 
+		color=blue,
+		placement=center,
+		position=current page.south west, 		
+		contents={\includegraphics{#1}},
+		opacity=#2,
+		hshift=#3,
+		vshift=#4
+	}
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PDF
+%----------------------------------------------------------------------------------------
+
+\newcommand{\gmpdfmeta}{
+	\hypersetup{
+		pdftitle={\@title},
+		pdfsubject={\@subject},
+		pdfauthor={\@author},
+		pdfcreator={\@author},
+		pdfproducer={\@author},		
+		pdfkeywords={\@keywords},
+		pdflang={\@lang}}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\gmtitle}{
+	\BgThispage	
+	\begin{titlepage}			
+		\vspace{1cm}
+		\centering
+		{\scshape\LARGE\@institution\unskip\strut\par}
+		\vspace{1cm}
+		{\scshape\Large\@project\unskip\strut\par}
+		\vspace{1.5cm}
+		{\huge\bfseries\@title\unskip\strut\par}
+		\vspace{2cm}
+		{\Large\itshape\@author\unskip\strut\par}
+		\vfill
+	\end{titlepage}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\copyrightYear}[1]{
+	\gdef\@copyrightYear{#1}
+}
+
+\newcommand*{\copyrightAuthor}[1]{
+	\gdef\@copyrightAuthor{#1}
+}
+
+\newcommand*{\copyrightInstitution}[1]{
+	\gdef\@copyrightInstitution{#1}
+}
+
+\newcommand*{\copyrightDepartment}[1]{
+	\gdef\@copyrightDepartment{#1}
+}
+
+\newcommand*{\copyrightDescription}[1]{
+	\gdef\@copyrightDescription{#1}
+}
+
+\newcommand*{\copyrightFirstPublished}[1]{
+	\gdef\@copyrightFirstPublished{#1}
+}
+
+\newcommand*{\copyrightUpdated}[1]{
+	\gdef\@copyrightUpdated{#1}
+}
+
+\newcommand*{\gmcopyright}{
+	\newpage
+	\thispagestyle{empty}
+	~\vfill		
+	\noindent Copyright \copyright\ \@copyrightAuthor\ \@copyrightYear	\\	
+	\noindent \textsc{\@copyrightDepartment, \@copyrightInstitution} \\[\baselineskip]
+	\noindent \textsc{\@authorWeb} \\[\baselineskip]	
+	\noindent \@copyrightDescription \\[\baselineskip]
+	\noindent First published \@copyrightFirstPublished \\
+	\noindent Last updated  \@copyrightUpdated		
+	\cleardoublepage	
+}
+
+
+%----------------------------------------------------------------------------------------
+%	CODE
+%----------------------------------------------------------------------------------------
+
+\lstdefinestyle{customc}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	frame=L,
+	xleftmargin=\parindent,
+	language=C,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+}
+
+\lstdefinestyle{customasm}{
+	belowcaptionskip=1\baselineskip,
+	frame=L,
+	xleftmargin=\parindent,
+	language=[x86masm]Assembler,
+	basicstyle=\footnotesize\ttfamily,
+	commentstyle=\itshape\color{purple!40!black},
+}
+
+\lstset{escapechar=@,style=customc}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{plain}
+

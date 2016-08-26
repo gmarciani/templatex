@@ -1,0 +1,29 @@
+% This is a template root file for Morgan & Claypool ACM books.
+% Please see read-me.txt for details.
+
+\documentclass[]{mcp-acm}
+
+\usepackage{amsmath}    % Package for AMS math extensions.
+\usepackage{graphicx}   % Package for importing EPS files.
+
+\makeindex              % if you use \index{...} in your book.
+
+\includeonly{front,chap01,appa,bio}
+
+\begin{document}
+
+\frontmatter
+\include{front}         % Front matter.
+
+\mainmatter
+\include{chap01}        % Chapter 1.
+\include{chap02}
+\include{chap03}
+\include{appa}          % Appendix A.
+
+\backmatter
+\bibliography{ACM-publications,biblio}
+\include{bio}           % Author(s) biographies.
+\include{book.ind}      % If the book has an index.
+
+\end{document}

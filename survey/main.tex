@@ -1,0 +1,71 @@
+%*******************************************************************************
+% Title: The cool title for an interesting survey about a wonderful research
+%
+% Conference: Cool Conference 2016
+%
+% Authors: Giacomo Marciani <giacomo.marciani@gmail.com>
+%
+% Institution: Department of Civil Engineering and Computer Science Engineering,
+% 			   University of Rome Tor Vergata, Italy
+%
+% Style: ACM Large VERSION 1.7 (modified with `gmbook` document option)
+%*******************************************************************************
+
+\documentclass[prodmode,gmbook]{acmlarge}
+
+%*******************************************************************************
+% Details
+%*******************************************************************************
+\acmVolume{2}
+\acmNumber{1}
+\acmArticle{1}
+\articleSeq{1}
+\acmMonth{9}
+\acmYear{2016}
+
+\issn{1234-56789}
+
+\doi{0000001.0000001}
+
+%*******************************************************************************
+% Algorithm
+%*******************************************************************************
+\usepackage[ruled]{algorithm2e}
+\SetAlFnt{\algofont}
+\SetAlCapFnt{\algofont}
+\SetAlCapNameFnt{\algofont}
+\SetAlCapHSkip{0pt}
+\IncMargin{-\parindent}
+\renewcommand{\algorithmcfname}{ALGORITHM}
+
+%*******************************************************************************
+% Title and Authors
+%*******************************************************************************
+\markboth{G. Marciani}{The cool title for an interesting survey about a wonderful research}
+\title{The cool title for an interesting survey about a wonderful research}
+\author{GIACOMO MARCIANI \affil{University of Rome Tor Vergata, Italy}}
+
+%*******************************************************************************
+% Content
+%*******************************************************************************
+
+\input{sec/abstract}
+\input{sec/ccs-keywords}
+
+\acmformat{Giacomo Marciani. 2016. The cool title for an interesting survey about a wonderful research.}
+
+\begin{document}
+
+\maketitle
+
+\input{sec/introduction}
+\input{sec/section}
+\input{sec/conclusions}
+
+%*******************************************************************************
+% Bibliography
+%*******************************************************************************
+\bibliographystyle{ACM-Reference-Format-Journals}
+\bibliography{./ref/biblio}
+
+\end{document}

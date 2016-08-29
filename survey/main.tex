@@ -8,10 +8,10 @@
 % Institution: Department of Civil Engineering and Computer Science Engineering,
 % 			   University of Rome Tor Vergata, Italy
 %
-% Style: ACM Large VERSION 1.7 (modified with `gmbook` document option)
+% Style: ACM Large VERSION 1.7 (modified with `gmsurvey` document option)
 %*******************************************************************************
 
-\documentclass[prodmode,gmbook]{acmlarge}
+\documentclass[prodmode,gmsurvey]{acmlarge}
 
 %*******************************************************************************
 % Details
@@ -24,8 +24,12 @@
 \acmYear{2016}
 
 \issn{1234-56789}
-
 \doi{0000001.0000001}
+
+%*******************************************************************************
+% Copyright
+%*******************************************************************************
+\setcopyright{rightsretained}
 
 %*******************************************************************************
 % Algorithm
@@ -43,7 +47,7 @@
 %*******************************************************************************
 \markboth{G. Marciani}{The cool title for an interesting survey about a wonderful research}
 \title{The cool title for an interesting survey about a wonderful research}
-\author{GIACOMO MARCIANI \affil{University of Rome Tor Vergata, Italy}}
+\author{GIACOMO MARCIANI \affil{University of Rome Tor Vergata}}
 
 %*******************************************************************************
 % Content
@@ -56,6 +60,13 @@
 
 \begin{document}
 
+\begin{bottomstuff}
+This work is supported by the Department of Civil Engineering and Computer Science
+Engineering, University of Rome Tor Vergata, Italy.\\
+Author's address: G. Marciani, Via del Politecnico 1, Rome, RM 00133, Italy;
+email: giacomo.marciani@gmail.com.
+\end{bottomstuff}
+
 \maketitle
 
 \input{sec/introduction}
@@ -65,7 +76,7 @@
 %*******************************************************************************
 % Bibliography
 %*******************************************************************************
-\bibliographystyle{ACM-Reference-Format-Journals}
+\bibliographystyle{acmreferences}
 \bibliography{./ref/biblio}
 
 \end{document}

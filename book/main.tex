@@ -1,0 +1,53 @@
+%*******************************************************************************
+% Title: The cool title for an interesting book about a wonderful topic
+%
+% Conference: Cool Conference 2016
+%
+% Authors: Giacomo Marciani <giacomo.marciani@gmail.com>
+%
+% Institution: Department of Civil Engineering and Computer Science Engineering,
+% 			   University of Rome Tor Vergata, Italy
+%
+% Style: ACM MC Book (MCP-ACM) VERSION 1.2
+%*******************************************************************************
+
+\documentclass[]{mcp-acm}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\makeindex
+
+\begin{document}
+
+%*******************************************************************************
+% Front
+%*******************************************************************************
+\frontmatter
+\include{sec/front}
+
+%*******************************************************************************
+% Content
+%*******************************************************************************
+\mainmatter
+\include{sec/chap01}
+\include{sec/appa01}
+
+\backmatter
+
+%*******************************************************************************
+% Bibliography
+%*******************************************************************************
+\bibliography{ref/acm-pubblications,ref/biblio}
+
+%*******************************************************************************
+% Author Biography
+%*******************************************************************************
+\include{sec/bio}
+
+%*******************************************************************************
+% Book Index
+%*******************************************************************************
+%\include{sec/book.ind}
+
+\end{document}

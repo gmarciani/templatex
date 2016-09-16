@@ -15,6 +15,15 @@
 \documentclass[prodmode,gmcs]{acmlarge}
 
 %*******************************************************************************
+% Packages
+%*******************************************************************************
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+%*******************************************************************************
 % Details
 %*******************************************************************************
 \acmVolume{2}
@@ -44,6 +53,32 @@
 \renewcommand{\algorithmcfname}{ALGORITHM}
 
 %*******************************************************************************
+% Notations
+%*******************************************************************************
+\newcommand{\probability}[1]{
+	\mathbf{P}[#1]	
+}
+
+%*******************************************************************************
+% Numbering
+%*******************************************************************************
+\numberwithin{equation}{section}
+
+%*******************************************************************************
+% References
+%*******************************************************************************
+\crefname{lem}{lemma}{lemmata}
+\Crefname{lem}{Lemma}{Lemmata}
+\crefname{cor}{corollary}{corollaries}
+\Crefname{cor}{Corollary}{Corollaries}
+\crefname{alg}{algorithm}{algorithms}
+\Crefname{alg}{Algorithm}{Algorithms}
+\externaldocument{sec/introduction}
+\externaldocument{sec/main-section}
+\externaldocument{sec/conclusions}
+\externaldocument{sec/app/latex-formats}
+
+%*******************************************************************************
 % Title and Authors
 %*******************************************************************************
 \markboth{G. Marciani}{The cool title for an interesting survey about a wonderful research}
@@ -51,27 +86,31 @@
 \author{GIACOMO MARCIANI \affil{University of Rome Tor Vergata}}
 
 %*******************************************************************************
-% Content
+% Front Content
 %*******************************************************************************
-
 \input{sec/abstract}
 \input{sec/ccs-keywords}
-
-\acmformat{Giacomo Marciani. 2016. The cool title for an interesting survey about a wonderful research.}
+\acmformat{Giacomo Marciani. 2016. The cool title for an interesting survey about a wonderful research}
 
 \begin{document}
-
+	
+%*******************************************************************************
+% Bottom Content
+%*******************************************************************************
 \begin{bottomstuff}
-This work is supported by the Department of Civil Engineering and Computer Science
-Engineering, University of Rome Tor Vergata, Italy.\\
-Author's address: G. Marciani, Via del Politecnico 1, Rome, RM 00133, Italy;
-email: giacomo.marciani@gmail.com.
+	This work is supported by the Department of Civil Engineering and Computer Science
+	Engineering, University of Rome Tor Vergata, Italy.\\
+	Author's address: G. Marciani, Via del Politecnico 1, Rome, RM 00133, Italy;
+	email: giacomo.marciani@gmail.com.
 \end{bottomstuff}
 
 \maketitle
 
+%*******************************************************************************
+% Core Content
+%*******************************************************************************
 \input{sec/introduction}
-\input{sec/section}
+\input{sec/main-section}
 \input{sec/conclusions}
 
 %*******************************************************************************
@@ -83,9 +122,7 @@ email: giacomo.marciani@gmail.com.
 %*******************************************************************************
 % Online Appendix
 %*******************************************************************************
-
 \elecappendix
-
-\input{sec/appendix}
+\input{sec/app/latex-formats}
 
 \end{document}

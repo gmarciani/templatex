@@ -1,0 +1,81 @@
+%*******************************************************************************
+% Title: The cool title for an interesting letter about a wonderful topic
+%
+% Authors: Giacomo Marciani <gmarciani@acm.org>
+%
+% Institution: Department of Civil Engineering and Computer Science Engineering,
+%              University of Rome Tor Vergata, Italy
+%
+% Style: moderncv
+%*******************************************************************************
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+%*******************************************************************************
+% MODERNCV OPTIONS
+% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% to set the default font; use '\sfdefault' for the default sans serif font,
+% '\rmdefault' for the default roman one, or any tex font name
+%*******************************************************************************
+\moderncvstyle{oldstyle}
+%\moderncvcolor{blue}
+%\renewcommand{\familydefault}{\sfdefault}
+%\nopagenumbers{}
+
+%*******************************************************************************
+% PACKAGES
+%*******************************************************************************
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{footmisc}
+\usepackage{lipsum}
+
+% personal data
+\name{Giacomo Marciani\\}{Michele Porretta}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+%\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+%\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{gmarciani@acm.org\\mporretta@acm.org}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Microsoft Research Labs}{Microsoft
+%\\123 somestreet\\some city
+}
+\date{May 15, 2017}
+\opening{Dear Sir or Madam,}
+\closing{Best regards,}
+\enclosure[Attached]{Curricula vit\ae}
+\makelettertitle
+
+\lipsum[1]
+
+\makeletterclosing
+
+\end{document}

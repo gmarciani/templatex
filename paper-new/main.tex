@@ -1,0 +1,128 @@
+%*******************************************************************************
+% Title: The cool title for an interesting paper about a wonderful research
+%
+% Conference: Cool Conference 2016
+%
+% Authors: Giacomo Marciani <gmarciani@acm.org>
+%
+% Institution: Department of Civil Engineering and Computer Science Engineering,
+%              University of Rome Tor Vergata, Italy
+%
+% Style: ACM ART (SIGCONF)
+%*******************************************************************************
+
+\documentclass[sigconf]{acmart}
+
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfig}
+\usepackage{bm}
+\usepackage{url}
+
+%*******************************************************************************
+% Shared Affiliation format
+%*******************************************************************************
+\def\sharedaffiliation{%
+\end{tabular}
+\begin{tabular}{c}}
+
+%*******************************************************************************
+% Fonts
+%*******************************************************************************
+%\newfont{\eaddfntresz}{phvr8t at 11pt}
+
+%*******************************************************************************
+% Margins
+%*******************************************************************************
+%\clubpenalty=10000
+%\widowpenalty=10000
+
+%*******************************************************************************
+% hyphenation
+%*******************************************************************************
+\hyphenation{sched-uler par-a-digm adopt-ed evolv-ing th}
+
+%*******************************************************************************
+% Details
+%*******************************************************************************
+\acmConference[WOODSTOCK'97]{ACM Woodstock conference}{July 1997}{El
+  Paso, Texas USA}
+\acmYear{1997}
+\copyrightyear{2016}
+\setcopyright{rightsretained}
+\acmISBN{123-4567-24-567/08/06}
+\acmDOI{10.475/123_4}
+\acmPrice{15.00}
+
+\begin{document}
+%*******************************************************************************
+% Title
+%*******************************************************************************
+\title{The cool title for an interesting paper \\ about a wonderful research}
+%\titlenote{Produces the permission block, and copyright information}
+%\subtitle{Extended Abstract}
+%\subtitlenote{The full version of the author's guide is available as \texttt{acmart.pdf} document}
+
+%*******************************************************************************
+% Authors
+%*******************************************************************************
+\author{Giacomo Marciani}
+%\authornote{Dr.~Trovato insisted his name be first.}
+\orcid{0000-0002-3675-8804}
+\affiliation{%
+  \institution{University of Rome Tor Vergata}
+  \streetaddress{Vial del Politecnico 1}
+  \city{Rome}
+  \state{Italy}
+  \postcode{00133}
+}
+\email{gmarciani@acm.org}
+
+\author{Giacomo Marciani}
+%\authornote{Dr.~Trovato insisted his name be first.}
+\orcid{0000-0002-3675-8804}
+\affiliation{%
+	\institution{University of Rome Tor Vergata}
+	\streetaddress{Vial del Politecnico 1}
+	\city{Rome}
+	\state{Italy}
+	\postcode{00133}
+}
+\email{gmarciani@acm.org}
+
+\author{Giacomo Marciani}
+%\authornote{Dr.~Trovato insisted his name be first.}
+\orcid{0000-0002-3675-8804}
+\affiliation{%
+	\institution{University of Rome Tor Vergata}
+	\streetaddress{Vial del Politecnico 1}
+	\city{Rome}
+	\state{Italy}
+	\postcode{00133}
+}
+\email{gmarciani@acm.org}
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{G. Marciani et al.}
+
+%*******************************************************************************
+% Content
+%*******************************************************************************
+\input{sec/abstract}
+\input{sec/ccs-keywords}
+\maketitle
+\input{sec/introduction}
+\input{sec/section}
+\input{sec/conclusions}
+\input{sec/acks}
+%\input{sec/samplebody-conf}
+
+%*******************************************************************************
+% Bibliography
+%*******************************************************************************
+\bibliographystyle{biblio}
+\bibliography{./ref/biblio}
+
+\end{document}

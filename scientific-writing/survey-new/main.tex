@@ -1,0 +1,140 @@
+%*******************************************************************************
+% Title: The cool title for an interesting survey about a wonderful research
+%
+% Conference: Cool Conference 2016
+%
+% Authors: Giacomo Marciani <gmarciani@ieee.org>
+%
+% Institution: Department of Civil Engineering and Computer Science Engineering,
+% 			   University of Rome Tor Vergata, Italy
+%
+% Style: ACM Large VERSION 2017
+%*******************************************************************************
+
+\documentclass[acmlarge]{acmart}
+
+%*******************************************************************************
+% Packages
+%*******************************************************************************
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{xr}
+
+%*******************************************************************************
+% Meta
+%*******************************************************************************
+\acmJournal{ACMROME-CP}
+\acmVolume{1}
+\acmNumber{1}
+\acmArticle{1}
+\acmYear{2017}
+\acmMonth{2}
+\acmArticleSeq{11}
+\acmDOI{0000001.0000001}
+\acmPrice{0.00}
+\received[accepted]{February 2017}
+
+%*******************************************************************************
+% Copyright
+%*******************************************************************************
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+%*******************************************************************************
+% Algorithm
+%*******************************************************************************
+\usepackage[ruled]{algorithm2e}
+\renewcommand{\algorithmcfname}{ALGORITHM}
+\SetAlFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\SetAlCapHSkip{0pt}
+\IncMargin{-\parindent}
+
+%*******************************************************************************
+% Custom Commands
+%*******************************************************************************
+\newcommand{\probability}[1]{
+	\mathbf{P}[#1]
+}
+
+%*******************************************************************************
+% Numbering
+%*******************************************************************************
+\numberwithin{equation}{section}
+
+%*******************************************************************************
+% References
+%*******************************************************************************
+\externaldocument{sec/introduction}
+\externaldocument{sec/main-section}
+\externaldocument{sec/conclusions}
+\externaldocument{sec/app/latex-formats}
+
+\begin{document}
+%*******************************************************************************
+% Title and Authors
+%*******************************************************************************
+\title{The cool title for an interesting survey about a wonderful research}
+\author{Giacomo Marciani}
+\orcid{0000-0002-3675-8804}
+\affiliation{%
+  \institution{University of Rome Tor Vergata}
+  \streetaddress{Via del Politecnico 1}
+  \city{Rome}
+  \state{RM}
+  \postcode{00133}
+  \country{IT}}
+
+%*******************************************************************************
+% Front
+%*******************************************************************************
+\input{sec/abstract}
+\input{sec/ccs-keywords}
+
+%*******************************************************************************
+% Thanks
+%*******************************************************************************
+\thanks{
+  This work is supported by the Department of Civil Engineering
+  and Computer Science Engineering, University of Rome Tor Vergata, Italy.\\
+  Author's address: G. Marciani, Via del Politecnico 1, Rome, RM 00133, Italy;
+  email: gmarciani@ieee.org.
+}
+
+\maketitle
+
+\renewcommand{\shortauthors}{G. Marciani}
+
+%*******************************************************************************
+% Core Content
+%*******************************************************************************
+\input{sec/introduction}
+\input{sec/main-section}
+\input{sec/conclusions}
+
+%*******************************************************************************
+% Appendix
+%*******************************************************************************
+\appendix
+\input{sec/app/appendix-a}
+
+%*******************************************************************************
+% Acks
+%*******************************************************************************
+\input{sec/acknowledgements}
+
+%*******************************************************************************
+% Bibliography
+%*******************************************************************************
+\bibliographystyle{acmreferences}
+\bibliography{ref/biblio}
+
+\end{document}

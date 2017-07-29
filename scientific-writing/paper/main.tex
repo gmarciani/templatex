@@ -1,0 +1,101 @@
+%*******************************************************************************
+% Title: The cool title for an interesting paper about a wonderful research
+%
+% Conference: Cool Conference 2016
+%
+% Authors: Giacomo Marciani <gmarciani@acm.org>
+%
+% Institution: Department of Civil Engineering and Computer Science Engineering,
+% 			   University of Rome Tor Vergata, Italy
+%
+% Style: ACM SIG Proceedings Alternate VERSION 2.8
+%*******************************************************************************
+
+\documentclass{sig-alternate}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfig}
+\usepackage{bm}
+\usepackage{url}
+
+%*******************************************************************************
+% Paper Size as US Letter
+%*******************************************************************************
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\usepackage[pass]{geometry}
+
+%*******************************************************************************
+% Shared Affiliation format
+%*******************************************************************************
+\def\sharedaffiliation{%
+\end{tabular}
+\begin{tabular}{c}}
+
+%*******************************************************************************
+% Fonts
+%*******************************************************************************
+\newfont{\eaddfntresz}{phvr8t at 11pt}
+
+%*******************************************************************************
+% Margins
+%*******************************************************************************
+\clubpenalty=10000
+\widowpenalty=10000
+
+%*******************************************************************************
+% hyphenation
+%*******************************************************************************
+\hyphenation{sched-uler par-a-digm adopt-ed evolv-ing th}
+
+\begin{document}
+
+%*******************************************************************************
+% Details
+%*******************************************************************************
+\CopyrightYear{2016}
+\setcopyright{rightsretained}
+\conferenceinfo{DEBS '16}{June 20-24, 2016, Irvine, CA, USA}
+\isbn{978-1-4503-4021-2/16/06}
+\doi{http://dx.doi.org/10.1145/2933267.2933517}
+
+%*******************************************************************************
+% Title and Authors
+%*******************************************************************************
+\title{The cool title for an interesting paper \\ about a wonderful research}
+
+\numberofauthors{1}
+\author{
+  \alignauthor
+  Giacomo Marciani\\
+  \email{{\eaddfntresz gmarciani@acm.org}}
+  %\alignauthor
+  %Giacomo Marciani\\
+  %\email{{\eaddfntresz gmarciani@acm.org}}
+  %\alignauthor
+  %Giacomo Marciani\\
+  %\email{{\eaddfntresz gmarciani@acm.org}}
+  \sharedaffiliation
+  \affaddr{Department of Civil Engineering and Computer Science Engineering}  \\
+  \affaddr{University of Rome Tor Vergata, Italy}
+}
+\maketitle
+
+%*******************************************************************************
+% Content
+%*******************************************************************************
+\input{sec/abstract}
+\input{sec/ccs-keywords}
+\input{sec/introduction}
+\input{sec/section}
+\input{sec/conclusions}
+
+%*******************************************************************************
+% Bibliography
+%*******************************************************************************
+\bibliographystyle{abbrv}
+\bibliography{./ref/biblio}
+
+\end{document}
